@@ -1,0 +1,60 @@
+.home {
+  color: rgba(43, 24, 22, 0.582);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 4px;
+  /* box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.116); */
+  box-shadow: 5px 5px 8px rgba(65, 35, 35, 0.418);
+}
+
+.header-title {
+  font-weight: 200;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(48, 34, 33, 0.315);
+  margin-bottom: 0px;
+}
+
+.about {
+  font-weight: 200;
+  padding: 0px 10px;
+  /* background-color: rgba(255, 255, 255, 0.103); */
+  /* border-bottom: 1px solid rgba(48, 34, 33, 0.315); */
+}
+
+/* ANIMATIONS */
+
+@keyframes ComponentFadeIn {
+  from {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+  } to {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes ComponentFadeOut {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
+}
+
+.sphere1 {
+  animation: 1.5s ComponentFadeIn;
+}
+
+.sphere2 {
+  animation: 1s ComponentFadeIn;
+}
+
+.sphere3 {
+  animation: 2s ComponentFadeIn;
+}
+
+.sphere4 {
+  animation: 1s ComponentFadeIn;
+}
