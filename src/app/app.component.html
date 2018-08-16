@@ -4,18 +4,18 @@
 
   <div class="app-body" fxFlex="fill" fxLayout="column" fxLayoutAlign="start stretch">
     <div class="navbar" fxShow.lt-sm="false" fxFlex="10" fxLayout="row" fxLayoutAlign="center center">
-      <h2 class="navbar-option navbar-option-start" (click)="setSelected('home')">Home</h2>
-      <h2 class="navbar-option navbar-option-middle" (click)="setSelected('resume')">Resume</h2>
-      <h2 class="navbar-option navbar-option-middle" (click)="setSelected('music')">Music</h2>
-      <h2 class="navbar-option navbar-option-middle" (click)="setSelected('photo')">Photo</h2>
-      <h2 class="navbar-option navbar-option-end" (click)="setSelected('video')">Video</h2>
+      <h2 class="navbar-option navbar-option-start" routerLink="home">Home</h2>
+      <h2 class="navbar-option navbar-option-middle" routerLink="resume">Resume</h2>
+      <h2 class="navbar-option navbar-option-middle" routerLink="music">Music</h2>
+      <h2 class="navbar-option navbar-option-middle" routerLink="photo">Photo</h2>
+      <h2 class="navbar-option navbar-option-end" routerLink="video">Video</h2>
     </div>
     <div class="navbar-mobile" fxShow.lt-sm="true" fxShow="false" fxFlex="10" fxLayout="row" fxLayoutAlign="center center">
       <h2 class="navbar-option" fxLayout="row" fxLayoutAlign="center center">Home <mat-icon class="expand">expand_more</mat-icon> </h2>
     </div>
 
 
-    <app-home *ngIf="this.selected === 'home'" class="app-body-content" fxFlex="90" fxShow.lt-sm="false" fxLayout="row" fxLayoutAlign="space-around stretch"></app-home>
+    <router-outlet></router-outlet>
 
 
     <!-- <router-outlet></router-outlet> -->
