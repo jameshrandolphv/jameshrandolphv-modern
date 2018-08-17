@@ -18,7 +18,7 @@
       </h2>
     </div>
     <div class="navbar-mobile-expanded" *ngIf="this.menuExpanded" fxLayout="column" fxLayoutAlign="start center">
-      <h2 (click)="setSelected('this.selected')" class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
+      <h2 (click)="setSelected(this.selected)" class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
         {{this.selected}}
         <mat-icon class="expand">expand_less</mat-icon>
       </h2>
