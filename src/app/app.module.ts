@@ -8,11 +8,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { ResumeComponent } from './pages/resume/resume.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { AppRoutingModule } from './/app-routing.module';
     MatIconModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

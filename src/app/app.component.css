@@ -5,18 +5,14 @@
   background: -webkit-linear-gradient(-45deg, #aa7180 0%,#ceabb4 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #aa7180 0%,#ceabb4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa7180', endColorstr='#ceabb4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  /* background-image: url(../assets/images/leather.png); */
+  /* background-image: url(../assets/images/sphere.png); */
   width: 100%;
   height: 100%;
+  overflow: auto;
 }
 
 .app-body {
   margin: 20px;
-}
-
-.app-body-content {
-  padding: 20px;
-  /* background-color: rgba(255, 255, 255, 0.315); */
 }
 
 .navbar {
@@ -29,6 +25,15 @@
 }
 
 .navbar-mobile {
+  color: rgba(43, 24, 22, 0.582);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  /* box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.116); */
+  box-shadow: 5px 5px 8px rgba(65, 35, 35, 0.418);
+}
+
+.navbar-mobile-expanded {
   color: rgba(43, 24, 22, 0.582);
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.2);

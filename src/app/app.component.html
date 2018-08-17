@@ -10,15 +10,40 @@
       <h2 class="navbar-option navbar-option-middle" routerLink="photo">Photo</h2>
       <h2 class="navbar-option navbar-option-end" routerLink="video">Video</h2>
     </div>
-    <div class="navbar-mobile" fxShow.lt-sm="true" fxShow="false" fxFlex="10" fxLayout="row" fxLayoutAlign="center center">
-      <h2 class="navbar-option" fxLayout="row" fxLayoutAlign="center center">Home <mat-icon class="expand">expand_more</mat-icon> </h2>
+    <div class="navbar-mobile" (click)="this.expandMenu()" *ngIf="!this.menuExpanded" fxShow.lt-sm="true" fxShow="false" fxFlex="10"
+      fxLayout="row" fxLayoutAlign="center center">
+      <h2 class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
+        {{this.selected}}
+        <mat-icon class="expand">expand_more</mat-icon>
+      </h2>
+    </div>
+    <div class="navbar-mobile-expanded" *ngIf="this.menuExpanded" fxLayout="column" fxLayoutAlign="start center">
+      <h2 (click)="setSelected('this.selected')" class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
+        {{this.selected}}
+        <mat-icon class="expand">expand_less</mat-icon>
+      </h2>
+      <h2 *ngIf="this.selected !== 'Home'" (click)="setSelected('Home')" class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
+        Home
+      </h2>
+      <h2 *ngIf="this.selected !== 'Resume'" (click)="setSelected('Resume')" class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
+        Resume
+      </h2>
+      <h2 *ngIf="this.selected !== 'Music'" (click)="setSelected('Music')" class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
+        Music
+      </h2>
+      <h2 *ngIf="this.selected !== 'Photo'" (click)="setSelected('Photo')" class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
+        Photo
+      </h2>
+      <h2 *ngIf="this.selected !== 'Video'" (click)="setSelected('Video')" class="navbar-option" fxLayout="row" fxLayoutAlign="center center">
+        Video
+      </h2>
+    </div>
+
+    <div fxFlex="90" *ngIf="!this.menuExpanded">
+      <router-outlet></router-outlet>
     </div>
 
 
-    <router-outlet></router-outlet>
-
-
-    <!-- <router-outlet></router-outlet> -->
   </div>
 
 </div>
