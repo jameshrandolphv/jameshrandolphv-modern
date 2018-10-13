@@ -4,11 +4,11 @@
 
   <div class="app-body" fxFlex="fill" fxLayout="column" fxLayoutAlign="start stretch">
     <div class="navbar" fxShow.lt-sm="false" fxFlex="10" fxLayout="row" fxLayoutAlign="center center">
-      <h2 class="navbar-option navbar-option-start" routerLink="home">Home</h2>
-      <h2 class="navbar-option navbar-option-middle" routerLink="resume">Resume</h2>
-      <h2 class="navbar-option navbar-option-middle" routerLink="music">Music</h2>
-      <h2 class="navbar-option navbar-option-middle" routerLink="photo">Photo</h2>
-      <h2 class="navbar-option navbar-option-end" routerLink="video">Video</h2>
+      <h2 class="navbar-option navbar-option-start" routerLink="home" (click)="setSelected('Home')">Home</h2>
+      <h2 class="navbar-option navbar-option-middle" routerLink="resume" (click)="setSelected('Resume')">Resume</h2>
+      <h2 class="navbar-option navbar-option-middle" routerLink="music" (click)="setSelected('Music')">Music</h2>
+      <h2 class="navbar-option navbar-option-middle" routerLink="photo" (click)="setSelected('Photo')">Photo</h2>
+      <h2 class="navbar-option navbar-option-end" routerLink="video" (click)="setSelected('Video')">Video</h2>
     </div>
     <div class="navbar-mobile" (click)="this.expandMenu()" *ngIf="!this.menuExpanded" fxShow.lt-sm="true" fxShow="false" fxFlex="10"
       fxLayout="row" fxLayoutAlign="center center">

@@ -9,22 +9,26 @@
 }
 
 .home {
-  color: rgba(43, 24, 22, 0.582);
-  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 20px;
   border-radius: 4px;
   /* box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.116); */
-  box-shadow: 5px 5px 8px rgba(65, 35, 35, 0.418);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.418);
+}
+
+.top {
+  margin-bottom: 20px;
 }
 
 .home-mobile {
-  color: rgba(43, 24, 22, 0.582);
-  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 20px;
   /* margin-top: 20px; */
   border-radius: 4px;
   /* box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.116); */
-  box-shadow: 5px 5px 8px rgba(65, 35, 35, 0.418);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.418);
 }
 
 .home-lights {
@@ -37,6 +41,15 @@
   padding-bottom: 5px;
   border-bottom: 1px solid rgba(48, 34, 33, 0.315);
   margin-bottom: 0px;
+}
+
+.page-title {
+  font-weight: 100;
+  font-size: 3em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(48, 34, 33, 0.315);
+  margin-bottom: 20px;
+  color: rgba(211, 197, 208, 0.726);
 }
 
 .about {
